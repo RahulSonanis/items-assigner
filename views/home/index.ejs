@@ -1,6 +1,12 @@
 <%- include('header', {title: title}) -%>
 
-<h1><%= title %></h1>
-<p>Welcome to <%= title %></p>
+<div class="container">
+  <div class="p-3 my-3 bg-dark text-white text-center">
+    <h1 class="display-4"><%= title %></h1>
+  </div>
+  <div class="text-center">
+    <a href="/main" class="btn btn-info" role="button">Submit</a>
+  </div>
+</div>
 
 <%- include('footer') -%>
