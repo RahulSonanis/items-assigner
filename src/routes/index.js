@@ -6,7 +6,8 @@ const PORT = config.SERVER_PORT;
 
 module.exports = () => {
   router.get('/', (req, res) => {
-    res.send(`Node and express server running on port ${PORT}`);
+    res.render('home/index', { title: 'Items Assigner' });
+    // res.send(`Node and express server running on port ${PORT}`);
   });
 
   return router;
