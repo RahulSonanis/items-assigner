@@ -5,7 +5,7 @@
     <h1 class="display-4"><%= title %> Simulation</h1>
   </div>
   <div class="table-responsive">
-    <table class="table table-bordered">
+    <table class="table table-bordered text-center">
       <thead class="thead-dark">
         <th>Person's Name</th>
         <% for(let i=0; i < itemCount; i++) { %>
@@ -16,8 +16,8 @@
         <% for(let i=0; i < personCount; i++) { %>
         <tr>
           <th class="bg-dark text-white"><%= persons[i] %></th>
-          <% for(let i=0; i < itemCount; i++) { %>
-          <td><%= items[i] %></td>
+          <% for(let j=0; j < itemCount; j++) { %>
+          <td id="<%= i %>_<%= j %>">-</td>
           <% } %>
         </tr>
         <% } %>

@@ -17,8 +17,8 @@ $(document).ready(function () {
       dataType: 'json',
       data: { simRounds: simRounds },
       success: function (msg) {
-        console.log(msg.msg);
-        alert(JSON.stringify(msg));
+        fillTable(JSON.parse(msg));
+
         $('#simRndBtn').html(`Submit`);
       },
       error: function () {
@@ -27,4 +27,14 @@ $(document).ready(function () {
       },
     });
   });
+
+  function fillTable(matrix) {
+    var m = matrix.length;
+    var n = matrix[0].length;
+    for (var i = 0; i < m; i++) {
+      for (var j = 0; j < n; j++) {
+        $('#' + i + '_' + j).html(matrix[i][j]);
+      }
+    }
+  }
 });

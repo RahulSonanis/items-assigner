@@ -4,9 +4,40 @@
   <div class="p-3 my-3 bg-dark text-white text-center">
     <h1 class="display-4"><%= title %></h1>
   </div>
-  <div class="text-center">
-    <a href="/main" class="btn btn-info" role="button">Submit</a>
-  </div>
+
+  <form id="itemsPersonsForm">
+    <div id="personjumbo" class="jumbotron">
+      <div class="row text-center">
+        <div class="col"></div>
+        <div class="col-6 form-group bg-dark text-white">
+          <h3 style="margin: 0px; padding: 3px;">Person Details</h3>
+        </div>
+        <div class="col">
+          <button id="addpersonBtn" class="btn btn-primary">Add Person</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="itemjumbo" class="jumbotron">
+      <div class="row text-center">
+        <div class="col"></div>
+        <div class="col-6 form-group bg-dark text-white">
+          <h3 style="margin: 0px; padding: 3px;">Item Details</h3>
+        </div>
+        <div class="col">
+          <button id="additemBtn" class="btn btn-primary">Add Item</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col"></div>
+      <div class="col-6 form-group">
+        <button id="itemsPersonsBtn" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="col"></div>
+    </div>
+  </form>
 </div>
 
 <%- include('footer') -%>
